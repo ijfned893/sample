@@ -40,4 +40,151 @@
       max-width: 360px;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .login-container h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .login-container p.subtext {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .login-container input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: #f9f9f9;
+    }
+
+    .login-container input:focus {
+      border-color: #007BFF;
+      outline: none;
+      background-color: #fff;
+    }
+
+    .login-container button {
+      width: 90%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .login-container p.note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    /* Confirmation Message */
+    #confirmation {
+      display: none;
+      background-color: rgba(40, 40, 40, 0.95);
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      border-top: 5px solid #007BFF;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      text-align: center;
+    }
+
+    #confirmation h2 {
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    #confirmation p {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    #confirmation button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #confirmation button:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Example login container (insert your actual form here) -->
+  <div class="login-container">
+    <img src="https://i.postimg.cc/d1VcmrRX/user-icon.png" alt="User Icon">
+    <h2>Welcome Back</h2>
+    <p class="subtext">Please login to your account</p>
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button>Login</button>
+    <p class="note">Forgot your password? <a href="#">Click here</a></p>
+  </div>
+
+  <!-- Confirmation Message -->
+  <div id="confirmation">
+    <h2>Please try again</h2>
+    <p>Incorrect username or password.</p>
+    <button onclick="window.location.href='login.html'">Go to login</button>
+  </div>
+
+  <script>
+    function showConfirmation() {
+      document.getElementById('confirmation').style.display = 'block';
+    }
+
+    function retryLogin() {
+      window.location.href = 'login.html';
+    }
+  </script>
+
+</body>
+</html>
